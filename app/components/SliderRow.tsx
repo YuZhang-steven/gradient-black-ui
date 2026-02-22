@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from 'react';
 import SliderTrack from './SliderTrack';
 import SliderKnob from './SliderKnob';

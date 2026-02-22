@@ -1,3 +1,5 @@
+import BlackDot from "./BlackDot";
+
 interface SliderTrackProps {
   tickPositions: number[];
 }
@@ -11,19 +13,11 @@ export default function SliderTrack({ tickPositions }: SliderTrackProps) {
       background: '#D8D8D8'
     }}>
       {tickPositions.map((position, index) => (
-        <div
+        <BlackDot
           key={index}
-          style={{
-            position: 'absolute',
-            width: '12px',
-            height: '12px',
-            background: '#000',
-            borderRadius: '50%',
-            top: '50%',
-            left: `${position}%`,
-            transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none'
-          }}
+          style={{ left: `${position}%` }}
+          className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2"
+          size={12}
         />
       ))}
     </div>
