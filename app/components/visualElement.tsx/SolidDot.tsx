@@ -1,4 +1,4 @@
-import { classNameMerger } from "../lib/classNameMerger";
+import { classNameMerger } from "../../lib/classNameMerger";
 
 type BlackDotProps = React.HTMLAttributes<HTMLDivElement> & {
     id?: string;
@@ -6,7 +6,7 @@ type BlackDotProps = React.HTMLAttributes<HTMLDivElement> & {
     ref?: React.Ref<HTMLDivElement>;
 }
 
-export default function BlackDot({
+export default function SolidDot({
     id = "black-dot",
     size = 12,
     className,
